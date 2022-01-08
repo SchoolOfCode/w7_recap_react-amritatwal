@@ -2,10 +2,11 @@ import React from "react";
 import "./App.css";
 import posts from "../../libs/data";
 import { useState } from "react";
-import BlogPost from ".././BlogPost/index";
+import BlogPost from "../BlogPost/index";
+import Comment from "../Comment/index";
 
 function App() {
-  const [blogPosts, updateBlogPosts] = useState(posts);
+  const [blogPosts, setBlogPosts] = useState(posts);
   return (
     <div className="App">
       <BlogPost
@@ -16,6 +17,7 @@ function App() {
         alt={blogPosts.alt}
         text={blogPosts.text}
       />
+      <Comment />
     </div>
   );
 }
