@@ -1,12 +1,18 @@
 import React from "react";
 import "./App.css";
-import posts from "../../libs/data";
+import { posts, sampleComments } from "../../libs/data";
 import { useState } from "react";
 import BlogPost from "../BlogPost/index";
-import Comment from "../Comment/index";
+import CommentList from "../CommentList/index";
 
 function App() {
   const [blogPosts, setBlogPosts] = useState(posts);
+  const [comments, updateComments] = useState(sampleComments);
+
+  function addComment(text, author) {
+    updateComments(text, author);
+  }
+
   return (
     <div className="App">
       <BlogPost
@@ -17,7 +23,9 @@ function App() {
         alt={blogPosts.alt}
         text={blogPosts.text}
       />
-      <Comment />
+      {comments.map((comment) => {
+        return <CommentList author={comment.author} text={comment.text} />;
+      })}
     </div>
   );
 }

@@ -15,4 +15,15 @@ export const posts = {
   alt: "A couple of coders.",
 };
 
-export default posts;
+export const sampleComments = [
+  {
+    author: "Ben Mee",
+    text: "Hello, great post",
+  },
+  {
+    author: "Ben Mee",
+    text: "Hello, great post",
+  },
+];
+
+export default { posts, sampleComments };
