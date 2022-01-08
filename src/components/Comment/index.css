@@ -1,0 +1,15 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* .comment--author {
+  padding: 0.5em;
+} */
+
+/* .comment--text {
+  padding: 0.5em;
+  border-bottom: 1px solid rgb(53, 52, 52);
+}  */
