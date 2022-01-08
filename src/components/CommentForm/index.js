@@ -21,6 +21,9 @@ function CommentForm({ addComment }) {
   }
 
   function handleSubmit(e) {
+    if (!inputText) {
+      alert("The text field cannot be empty. Please try again.");
+    }
     addComment(inputText, inputAuthor);
     updateInputText("");
     e.preventDefault();
